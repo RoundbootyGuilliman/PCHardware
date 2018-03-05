@@ -39,7 +39,11 @@
 
 11. Вверху, в строке меню нажать Server - Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа нажать на кнопку "..." и в открывшемся окне выбрать файл Dump20180305.sql. Нажать Start Import.
 
-12. Запустить Intellij IDEA, сконфигурировать tomcat и запустить проект во внешнем браузере.
+12. Запустить Intellij IDEA, нажать "Open", в открывшемся окне выбрать папку с проектом "PCHardware".
+
+13. При запуске внизу справа может появиться окно "Maven projects need to be imported". В окне следует нажать "Enable Auto-Import".
+
+13/1. Если окно не появилось, откройте File - Settings - Bulid, Execution, Deployment - Build Tools - Maven - Importing, отметьте чекбокс под названием Import Maven projects automatically, и нажмите OK.
 
 В файле other.properties хранятся номер порта MySQL, user и password, впишите свои значения если необходимо.
 
