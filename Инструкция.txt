@@ -4,15 +4,15 @@
 
 3. Скачать Apache Tomcat по следующей ссылке http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5-windows-x64.zip
 
-4. Открыть скачавшийся архив программой WinRAR или WinZip, и распаковать содержимое в корень системного диска C:\
+4. Открыть скачавшийся архив программой WinRAR или WinZip, и распаковать папку apache-tomcat-9.0.5 в корень системного диска C:\
 
 5. Скачать MySQL Installer по следующей ссылке: https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.21.0.msi
 
 6. Запустить установщик, выбрать тип установки "Developer Default", в окне конфигурации установить Port Number на "3306", MySQL Root Password - на "root".
 
-7. В папку tomcat/lib положить файл mysql-connector-java-8.0.8-dmr.jar
+7. В папку apache-tomcat-9.0.5/lib положить файл mysql-connector-java-8.0.8-dmr.jar
 
-8. В файле tomcat/conf/server.xml заменить следующие строки:
+8. В файле apache-tomcat-9.0.5/conf/server.xml заменить следующие строки:
 
 
 <Realm className="org.apache.catalina.realm.LockOutRealm">
@@ -43,8 +43,10 @@
 
 13. При запуске внизу справа может появиться окно "Maven projects need to be imported". В окне следует нажать "Enable Auto-Import".
 
-13/1. Если окно не появилось, откройте File - Settings - Bulid, Execution, Deployment - Build Tools - Maven - Importing, отметьте чекбокс под названием Import Maven projects automatically, и нажмите OK.
+13/1. Если окно не появилось, в строке меню откройте File - Settings - Bulid, Execution, Deployment - Build Tools - Maven - Importing, отметьте чекбокс под названием Import Maven projects automatically, и нажмите OK.
 
-В файле other.properties хранятся номер порта MySQL, user и password, впишите свои значения если необходимо.
+14. В строке меню откройте File - Settings - Editor - File Encodings, и установите Project Encoding а так же Default encoding for properties files на значение "UTF-8".
+
+15. В строке меню откройте Run - Edit Configurations. Нажмите зелёный плюс в верхнем левом углу. В выпадающем списке выберите Tomcat Server - Local. В открывшемся окне справа нажмите Configure. В открывшемся окне нажмите зелёный плюс в верхнем левом углу. В правом верхнем углу нажмите кнопку "...", в корневом каталоге C:\ найдите папку apache-tomcat-9.0.5, выберите её и нажмите OK. 
 
 При разрешениях экрана ниже 1600х900 может поплыть вёрстка, если не уменьшить масштаб браузера.
