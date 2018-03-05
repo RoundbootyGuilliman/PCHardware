@@ -39,7 +39,7 @@
 
 11. Вверху, в строке меню нажать Server - Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа нажать на кнопку "..." и в открывшемся окне выбрать файл Dump20180305.sql. Нажать Start Import.
 
-12. Запустить Intellij IDEA, нажать "Open", в открывшемся окне выбрать папку с проектом "PCHardware".
+12. Запустить Intellij IDEA, появится окно активации, в нём выбрать "Evaluate for free", и нажать ОК. Появится ещё одно окно, в нём нажать "Open", в открывшемся окне выбрать папку с проектом "PCHardware".
 
 13. При запуске внизу справа может появиться окно "Maven projects need to be imported". В окне следует нажать "Enable Auto-Import".
 
