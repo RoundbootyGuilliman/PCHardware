@@ -1,6 +1,6 @@
 1. Скачать Intellij IDEA по следующей ссылке: https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows
 
-2. Запустить скачавшийся установщик, и установить программу следуя инструкциям установщика
+2. Запустить скачавшийся установщик, и установить программу следуя инструкциям установщика.
 
 3. Скачать Apache Tomcat по следующей ссылке http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5-windows-x64.zip
 
@@ -8,9 +8,9 @@
 
 5. Скачать MySQL Installer по следующей ссылке: https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.21.0.msi
 
-6. Запустить установщик, выбрать тип установки "Developer Default", в окне конфигурации установить порт на 3306, root password - на "root".
+6. Запустить установщик, выбрать тип установки "Developer Default", в окне конфигурации установить Port Number на "3306", MySQL Root Password - на "root".
 
-7. В папку tomcat/lib положить файл mysql-connector-java-8.0.8-dmr.jar.
+7. В папку tomcat/lib положить файл mysql-connector-java-8.0.8-dmr.jar
 
 8. В файле tomcat/conf/server.xml заменить следующие строки:
 
@@ -33,13 +33,13 @@
 	</Realm>
 </Realm>
 
-9. Открыть Пуск - MySQL - MySQL Workbench, открыть подключение к БД.
+9. Открыть Пуск - MySQL - MySQL Workbench, открыть подключение к БД под названием Local Instance MySQL Router. При необходимости ввести пароль "root".
 
-10. Слева на панели Navigator нажать кнопку Startup/Shutdown, если сервер stopped, нажать Start Server.
+10. Слева на панели Navigator нажать кнопку Startup/Shutdown, если статус сервера - "stopped", нажать Start Server.
 
-11. Вверху, на строке меню нажать Server - Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа нажать на кнопку "..." и в открывшемся окне выбрать файл Dump20180305.sql. Нажать Start Import
+11. Вверху, в строке меню нажать Server - Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа нажать на кнопку "..." и в открывшемся окне выбрать файл Dump20180305.sql. Нажать Start Import.
 
-10. Открыть проект в Intellij IDEA, сконфигурировать tomcat и запустить проект во внешнем браузере.
+12. Запустить Intellij IDEA, сконфигурировать tomcat и запустить проект во внешнем браузере.
 
 В файле other.properties хранятся номер порта MySQL, user и password, впишите свои значения если необходимо.
 
