@@ -10,9 +10,9 @@
 
 6. Запустить установщик, выбрать тип установки "Developer Default", в окне конфигурации установить порт на 3306, root password - на "root".
 
-2. В папку tomcat/lib положить файл mysql-connector-java-8.0.8-dmr.jar.
+7. В папку tomcat/lib положить файл mysql-connector-java-8.0.8-dmr.jar.
 
-3. В файле tomcat/conf/server.xml заменить следующие строки:
+8. В файле tomcat/conf/server.xml заменить следующие строки:
 
 
 <Realm className="org.apache.catalina.realm.LockOutRealm">
@@ -33,12 +33,9 @@
 	</Realm>
 </Realm>
 
+9. Запустить MySQL Workbench, и импортировать базу из файла Dump20180305.
 
-если номер порта MySQL, user и password отличаются, впишите свои значения в строке выше.
-
-4. Запустить MySQL Workbench, и импортировать базу из файла Dump20180305.
-
-5. Открыть проект в Intellij IDEA, сконфигурировать tomcat и запустить проект во внешнем браузере.
+10. Открыть проект в Intellij IDEA, сконфигурировать tomcat и запустить проект во внешнем браузере.
 
 В файле other.properties хранятся номер порта MySQL, user и password, впишите свои значения если необходимо.
 
