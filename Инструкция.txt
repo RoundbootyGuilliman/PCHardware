@@ -8,7 +8,8 @@
 
 5. Скачать MySQL Installer по следующей ссылке: https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.21.0.msi
 
-6. Запустить скачавшийся файл, следовать инструкциям установщика, в окне выбора типа установки выбрать "Developer Default", в окне конфигурации установить Port Number на "3306", MySQL Root Password - на "root".
+6. Запустить скачавшийся файл, следовать инструкциям установщика, в окне выбора типа установки выбрать "Developer Default", в окне
+конфигурации установить Port Number на "3306", MySQL Root Password - на "root".
 
 7. В папку apache-tomcat-9.0.5/lib положить файл mysql-connector-java-8.0.8-dmr.jar
 
@@ -33,21 +34,30 @@
 	</Realm>
 </Realm>
 
-9. Открыть Пуск - MySQL - MySQL Workbench, открыть подключение к БД под названием Local Instance MySQL Router. При необходимости ввести пароль "root".
+9. Открыть Пуск - MySQL - MySQL Workbench, открыть подключение к БД под названием Local Instance MySQL Router. При необходимости ввести
+пароль "root".
 
 10. Слева на панели Navigator нажать кнопку Startup/Shutdown, если статус сервера - "stopped", нажать Start Server.
 
-11. Вверху, в строке меню нажать Server - Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа нажать на кнопку "..." и в открывшемся окне выбрать файл Dump20180305.sql. Нажать Start Import.
+11. Вверху, в строке меню нажать Server - Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа нажать
+на кнопку "..." и в открывшемся окне выбрать файл Dump20180305.sql. Нажать Start Import.
 
-12. Запустить Intellij IDEA, появится окно активации, в нём выбрать "Evaluate for free", и нажать ОК. Появится ещё одно окно, в нём нажать "Open", в открывшемся окне выбрать папку с проектом "PCHardware".
+12. Запустить Intellij IDEA, появится окно активации, в нём выбрать "Evaluate for free", и нажать ОК. Появится ещё одно окно, в нём
+нажать "Open", в открывшемся окне выбрать папку с проектом "PCHardware".
 
 13. При запуске внизу справа может появиться окно "Maven projects need to be imported". В окне следует нажать "Enable Auto-Import".
 
-13/1. Если окно не появилось, в строке меню откройте File - Settings - Bulid, Execution, Deployment - Build Tools - Maven - Importing, отметьте чекбокс под названием Import Maven projects automatically, и нажмите ОК.
+13/1. Если окно не появилось, в строке меню откройте File - Settings - Bulid, Execution, Deployment - Build Tools - Maven - Importing,
+отметьте чекбокс под названием Import Maven projects automatically, и нажмите ОК.
 
-14. В строке меню откройте File - Settings - Editor - File Encodings, и установите Project Encoding а так же Default encoding for properties files на значение "UTF-8".
+14. В строке меню откройте File - Settings - Editor - File Encodings, и установите Project Encoding а так же Default encoding for
+properties files на значение "UTF-8".
 
-15. В строке меню откройте Run - Edit Configurations. Нажмите зелёный плюс в верхнем левом углу. В выпадающем списке выберите Tomcat Server - Local. В открывшемся окне справа нажмите Configure. В открывшемся окне нажмите зелёный плюс в верхнем левом углу. В правом верхнем углу нажмите кнопку "...". В корневом каталоге C:\ найдите папку apache-tomcat-9.0.5, выберите её и нажмите ОК. Нажмите ОК ещё раз. В окне справа переключите вкладку с Server на Deployment. Справа вверху нажмите зелёный плюс - Artifact, выберите PCHardware:war exploded и нажмите OK. Ещё раз нажмите ОК.
+15. В строке меню откройте Run - Edit Configurations. Нажмите зелёный плюс в верхнем левом углу. В выпадающем списке выберите Tomcat
+Server - Local. В открывшемся окне справа нажмите Configure. В открывшемся окне нажмите зелёный плюс в верхнем левом углу. В правом
+верхнем углу нажмите кнопку "...". В корневом каталоге C:\ найдите папку apache-tomcat-9.0.5, выберите её и нажмите ОК. Нажмите ОК ещё
+раз. В окне справа переключите вкладку с Server на Deployment. Справа вверху нажмите зелёный плюс - Artifact, выберите PCHardware:war
+exploded и нажмите OK. Ещё раз нажмите ОК.
 
 16. Чтобы запустить приложение в строке меню нажмите Run - Run 'Unnamed', или Shift+F10.
 
