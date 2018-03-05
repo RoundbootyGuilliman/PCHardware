@@ -8,7 +8,7 @@
 
 5. Скачать MySQL Installer по следующей ссылке: https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.21.0.msi
 
-6. Запустить установщик, выбрать тип установки "Developer Default", в окне конфигурации установить Port Number на "3306", MySQL Root Password - на "root".
+6. Запустить скачавшийся файл, следовать инструкциям установщика, в окне выбора типа установки выбрать "Developer Default", в окне конфигурации установить Port Number на "3306", MySQL Root Password - на "root".
 
 7. В папку apache-tomcat-9.0.5/lib положить файл mysql-connector-java-8.0.8-dmr.jar
 
