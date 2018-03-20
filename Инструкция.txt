@@ -1,19 +1,23 @@
-1. Скачать Intellij IDEA по следующей ссылке: https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows
+1. Скачать JDK по следующей ссылке: http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_windows-x64_bin.exe
 
 2. Запустить скачавшийся установщик, установить программу следуя инструкциям установщика.
 
-3. Скачать Apache Tomcat по следующей ссылке http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5-windows-x64.zip
+3. Скачать Intellij IDEA по следующей ссылке: https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows
 
-4. Открыть скачавшийся архив программой WinRAR или WinZip, и распаковать папку apache-tomcat-9.0.5 в корень системного диска C:\
+4. Запустить скачавшийся установщик, установить программу следуя инструкциям установщика.
 
-5. Скачать MySQL Installer по следующей ссылке: https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.21.0.msi
+5. Скачать Apache Tomcat по следующей ссылке http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5-windows-x64.zip
 
-6. Запустить скачавшийся файл, следовать инструкциям установщика, в окне выбора типа установки выбрать "Developer Default", в окне
+6. Открыть скачавшийся архив программой WinRAR или WinZip, и распаковать папку apache-tomcat-9.0.5 в корень системного диска C:\
+
+7. Скачать MySQL Installer по следующей ссылке: https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.21.0.msi
+
+8. Запустить скачавшийся файл, следовать инструкциям установщика, в окне выбора типа установки выбрать "Developer Default", в окне
 конфигурации установить Port Number на "3306", MySQL Root Password - на "root".
 
-7. В папку apache-tomcat-9.0.5/lib положить файл mysql-connector-java-8.0.8-dmr.jar
+9. В папку apache-tomcat-9.0.5/lib положить файл mysql-connector-java-8.0.8-dmr.jar
 
-8. В файле apache-tomcat-9.0.5/conf/server.xml заменить следующие строки:
+10. В файле apache-tomcat-9.0.5/conf/server.xml заменить следующие строки:
 
 
 <Realm className="org.apache.catalina.realm.LockOutRealm">
@@ -34,37 +38,37 @@
 	</Realm>
 </Realm>
 
-9. Открыть Пуск -> MySQL -> MySQL Workbench, открыть подключение к БД под названием Local Instance MySQL Router. При необходимости
+11. Открыть Пуск -> MySQL -> MySQL Workbench, открыть подключение к БД под названием Local Instance MySQL Router. При необходимости
 ввести пароль "root".
 
-10. Слева на панели Navigator нажать кнопку Startup/Shutdown, если статус сервера - "stopped", нажать Start Server.
+12. Слева на панели Navigator нажать кнопку Startup/Shutdown, если статус сервера - "stopped", нажать Start Server.
 
-11. Вверху, в строке меню нажать Server -> Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа
+13. Вверху, в строке меню нажать Server -> Data Import. В разделе Import Options выбрать "Import from Self-Contained File". Справа
 нажать на кнопку "..." и в открывшемся окне выбрать файл Dump20180305.sql. Нажать Start Import.
 
-12. Запустить Intellij IDEA, появится окно активации, в нём выбрать "Evaluate for free", и нажать ОК. Появится ещё одно окно, в нём
+14. Запустить Intellij IDEA, появится окно активации, в нём выбрать "Evaluate for free", и нажать ОК. Появится ещё одно окно, в нём
 нажать "Open", в открывшемся окне выбрать папку с проектом "PCHardware".
 
-13. При запуске внизу справа может появиться окно "Maven projects need to be imported". В окне следует нажать "Enable Auto-Import".
+15. При запуске внизу справа может появиться окно "Maven projects need to be imported". В окне следует нажать "Enable Auto-Import".
 
-13/1. Если окно не появилось, в строке меню откройте File -> Settings -> Bulid, Execution, Deployment -> Build Tools -> Maven ->
+15/1. Если окно не появилось, в строке меню откройте File -> Settings -> Bulid, Execution, Deployment -> Build Tools -> Maven ->
 Importing, отметьте чекбокс под названием Import Maven projects automatically, и нажмите ОК.
 
-14. В строке меню откройте File -> Settings -> Editor -> File Encodings, и установите Project Encoding а так же Default encoding for
+16. В строке меню откройте File -> Settings -> Editor -> File Encodings, и установите Project Encoding а так же Default encoding for
 properties files на значение "UTF-8".
 
-15. В строке меню откройте File -> Project Structure. В разделе Project SDK нажмите New -> JDK. В открывшемся окне найдите папку
-C:\Program Files\Java\jdk-x.x.x выберите её, и нажмите ОК -> ОК.
+17. В строке меню откройте File -> Project Structure. В разделе Project SDK нажмите New -> JDK. В открывшемся окне найдите папку
+C:\Program Files\Java\jdk-x.x.x выберите её, и нажмите ОК. В этом же окне установите Project language level на "9", нажмите ОК.
 
-16. В строке меню откройте Run -> Edit Configurations. Нажмите зелёный плюс в верхнем левом углу. В выпадающем списке выберите Tomcat
+18. В строке меню откройте Run -> Edit Configurations. Нажмите зелёный плюс в верхнем левом углу. В выпадающем списке выберите Tomcat
 Server -> Local. В открывшемся окне справа нажмите Configure. В открывшемся окне в правом верхнем углу нажмите кнопку "...". В корневом
 каталоге C:\ найдите папку apache-tomcat-9.0.5, выберите её и нажмите ОК. В окне справа переключите вкладку с Server на Deployment.
 Справа вверху нажмите зелёный плюс -> Artifact, выберите PCHardware:war exploded и нажмите OK -> ОК.
 
-17. Навести мышь на серый квадрат в левом нижнем углу. В выпадающем списке выбрать Maven Projects. В открывшемся меню справа выбрать
+19. Навести мышь на серый квадрат в левом нижнем углу. В выпадающем списке выбрать Maven Projects. В открывшемся меню справа выбрать
 PCHardware -> Lifecycle, и дважды кликнуть install.
 
-18. Чтобы запустить приложение в строке меню нажмите Run -> Run 'Unnamed', или Shift+F10.
+20. Чтобы запустить приложение в строке меню нажмите Run -> Run 'Unnamed', или Shift+F10.
 
 Данные для входа в учётную запись админа:
 Имя пользователя: admin
