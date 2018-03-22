@@ -1,8 +1,9 @@
 package epam.javalab22.pchardware.entity;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class Product {
+public class Product implements Serializable {
 
     private int id;
     private String name;
